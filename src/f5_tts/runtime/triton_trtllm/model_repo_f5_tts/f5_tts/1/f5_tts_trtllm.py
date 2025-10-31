@@ -215,7 +215,7 @@ class F5TTS(object):
         if self.debug_mode:
             self.debug_tensors = list(set(found_tensor_names) - set(expected_tensor_names))
 
-        self.max_mel_len = 4096
+        self.max_mel_len = 40960
         self.text_embedding = TextEmbedding(
             text_num_embeds=vocab_size,
             text_dim=config["pretrained_config"]["text_dim"],
