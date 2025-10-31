@@ -112,7 +112,7 @@ class TritonPythonModel:
         self.win_length = 1024
         self.hop_length = 256
         self.n_mel_channels = 100
-        self.max_mel_len = 4096
+        self.max_mel_len = 8192  # max mel len for inference
 
         parameters = json.loads(args["model_config"])["parameters"]
         for key, value in parameters.items():
